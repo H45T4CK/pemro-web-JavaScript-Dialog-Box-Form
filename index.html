@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penugasan Terstruktur Pertemuan 15 - JavaScript & Dialog Box</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- WRAPPER UTAMA -->
+    <div id="main-container">
+
+        <!-- DIV 1: HEADER -->
+        <div id="header-box">
+            <h1 class="header-title">PORTFOLIO & PERSONAL WEBSITE</h1>
+            <div class="header-sub">Servatius Hasta Kristanto — Teknik Informatika UNPAM</div>
+        </div>
+
+        <!-- DIV 2: CONTAINER UTAMA (DUA KOLOM) -->
+        <div id="content-container">
+
+            <!-- DIV 2A: SIDEBAR MENU -->
+            <div id="sidebar-box">
+                <h3 class="menu-title">MENU UTAMA</h3>
+                <ul class="menu-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#galery">Gallery</a></li>
+                    <li><a href="#kontak">Kontak & Pesan</a></li>
+                </ul>
+            </div>
+
+            <!-- DIV 2B: KONTEN UTAMA -->
+            <div id="main-content">
+
+                <!-- SECTION 1: HOME (Dengan Fitur Prompt & Alert Sapaan) -->
+                <div class="card-box" id="home">
+                    <h2 class="card-title">Selamat Datang, <span id="namaPengunjung" class="text-highlight">Pengunjung</span>!</h2>
+                    <p align="justify">
+                        Halo! Saya mahasiswa Teknik Informatika Universitas Pamulang. Website portofolio ini telah dilengkapi dengan fitur interaktif JavaScript berupa <b>Prompt, Alert, Confirm, dan Form</b> pada Pertemuan 15.
+                    </p>
+                    <button type="button" class="btn-secondary" onclick="sapaPengunjung()">Ubah Nama Sapaan (Prompt)</button>
+                </div>
+
+                <!-- SECTION 2: PROFIL -->
+                <div class="card-box" id="profil">
+                    <h2 class="card-title">Profil Lengkap</h2>
+                    <p><span class="text-highlight">Pengalaman adalah guru terbaik.</span> Belajar pemrograman dan teknologi sistem memerlukan konsistensi, latihan terus-menerus, dan rasa ingin tahu yang tinggi.</p>
+                    
+                    <h3 style="margin-top: 15px;">Data Diri</h3>
+                    <table class="table-custom">
+                        <tr>
+                            <td width="30%"><b>Nama</b></td>
+                            <td>: Servatius Hasta Kristanto</td>
+                        </tr>
+                        <tr>
+                            <td><b>NIM</b></td>
+                            <td>: 241011400076</td>
+                        </tr>
+                        <tr>
+                            <td><b>Kelas</b></td>
+                            <td>: 05TPLP002</td>
+                        </tr>
+                        <tr>
+                            <td><b>Program Studi</b></td>
+                            <td>: Teknik Informatika (S1)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Kampus</b></td>
+                            <td>: Universitas Pamulang (UNPAM)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- SECTION 3: GALLERY -->
+                <div class="card-box" id="galery">
+                    <h2 class="card-title">Gallery & Project Showcases</h2>
+                    <p>Berikut adalah beberapa dokumentasi kegiatan dan proyek yang dikerjakan:</p>
+                    <div class="gallery-container">
+                        <img src="image/gb1.png" width="300" alt="Project 1">
+                        <img src="image/gb2.jpg" width="150" alt="Project 2">
+                    </div>
+                </div>
+
+                <!-- SECTION 4: KONTAK & FORM INTERAKTIF (Form, Confirm, Alert) -->
+                <div class="card-box" id="kontak">
+                    <h2 class="card-title">Informasi Kontak & Kirim Pesan</h2>
+                    <p><b>Alamat Rumah:</b><br>
+                    Jl. Sawangan Elok Blok C2 No 2, Kel. Durenseribu, Kec. Bojongsari, Kota Depok, 16518, Jawa Barat</p>
+                    
+                    <table class="table-custom" style="margin-top: 10px; margin-bottom: 20px;">
+                        <tr>
+                            <td width="20%"><b>Website</b></td>
+                            <td>: <a href="https://hasta-superapp.onrender.com/" target="_blank">Website Hasta</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>Email</b></td>
+                            <td>: <a href="mailto:hastaunpam@gmail.com">Kirim Email ke Hasta</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>GitHub</b></td>
+                            <td>: <a href="https://github.com/H45T4CK" target="_blank">GitHub Hasta</a></td>
+                        </tr>
+                    </table>
+
+                    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
+
+                    <!-- FORM BUKU TAMU / PESAN -->
+                    <h3>Form Kirim Pesan (Buku Tamu)</h3>
+                    <form name="formPesan" class="contact-form">
+                        <div class="form-group">
+                            <label>Nama Pengirim :</label>
+                            <input type="text" id="inputNama" placeholder="Masukkan nama Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Status Pengunjung :</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="status" value="Mahasiswa" checked> Mahasiswa</label>
+                                <label><input type="radio" name="status" value="Dosen"> Dosen</label>
+                                <label><input type="radio" name="status" value="Umum"> Umum</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Keperluan :</label>
+                            <select id="inputKeperluan">
+                                <option value="Diskusi Tugas Kuliah">Diskusi Tugas Kuliah</option>
+                                <option value="Kolaborasi Project Web/IoT">Kolaborasi Project Web/IoT</option>
+                                <option value="Sapaan / Buku Tamu">Sapaan / Buku Tamu</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Isi Pesan :</label>
+                            <input type="text" id="inputIsiPesan" placeholder="Tulis pesan singkat Anda di sini...">
+                        </div>
+
+                        <div class="btn-row">
+                            <button type="button" class="btn-primary" onclick="kirimPesan()">Kirim Pesan</button>
+                            <input type="reset" class="btn-reset" value="Reset" onclick="resetPesan()">
+                        </div>
+                    </form>
+
+                    <!-- KOTAK OUTPUT HASIL FORM -->
+                    <div id="hasilPesan" class="output-pesan"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DIV 3: FOOTER -->
+        <div id="footer-box">
+            <b>Servatius Hasta Kristanto | 241011400076 | 05TPLP002</b><br>
+            Tugas Pemrograman Web 1 (PT_15 JavaScript Dialog Box & Form) - UNPAM
+        </div>
+
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT: PROMPT, ALERT, CONFIRM, FORM -->
+    <script type="text/javascript">
+        // 1. Fungsi Prompt & Alert saat halaman dibuka
+        function sapaPengunjung() {
+            var nama = prompt("Halo! Silakan masukkan nama Anda:", "");
+            if (nama != null && nama.trim() !== "") {
+                document.getElementById("namaPengunjung").innerText = nama;
+                document.getElementById("inputNama").value = nama;
+                alert("Selamat datang di website portofolio Hasta, " + nama + "!");
+            } else {
+                document.getElementById("namaPengunjung").innerText = "Pengunjung";
+            }
+        }
+
+        // Jalankan otomatis saat halaman selesai dimuat
+        window.onload = function() {
+            sapaPengunjung();
+        };
+
+        // 2. Fungsi Pengolahan Form dengan Validasi Alert & Confirm
+        function kirimPesan() {
+            var pengirim = document.getElementById("inputNama").value;
+            var keperluan = document.getElementById("inputKeperluan").value;
+            var isiPesan = document.getElementById("inputIsiPesan").value;
+
+            // Validasi Form menggunakan Alert
+            if (pengirim.trim() === "" || isiPesan.trim() === "") {
+                alert("Peringatan: Nama Pengirim dan Isi Pesan wajib diisi!");
+                return;
+            }
+
+            // Ambil nilai Radio Button Status
+            var radioStatus = document.getElementsByName("status");
+            var statusTerpilih = "";
+            for (var i = 0; i < radioStatus.length; i++) {
+                if (radioStatus[i].checked) {
+                    statusTerpilih = radioStatus[i].value;
+                    break;
+                }
+            }
+
+            // Dialog Confirm sebelum mengirim data
+            var konfirmasi = confirm(
+                "Apakah Anda yakin ingin mengirim pesan ini?\n\n" +
+                "Pengirim : " + pengirim + " (" + statusTerpilih + ")\n" +
+                "Keperluan : " + keperluan + "\n" +
+                "Pesan : " + isiPesan
+            );
+
+            if (konfirmasi == true) {
+                // Dialog Alert jika pengguna klik OK
+                alert("Terima kasih, " + pengirim + "! Pesan Anda berhasil dikirim.");
+
+                // Tampilkan data ke halaman HTML
+                var boxOutput = document.getElementById("hasilPesan");
+                boxOutput.style.display = "block";
+                boxOutput.innerHTML =
+                    "<b>Pesan Terkirim:</b><br>" +
+                    "Dari : " + pengirim + " (" + statusTerpilih + ")<br>" +
+                    "Keperluan : " + keperluan + "<br>" +
+                    "Pesan : \"" + isiPesan + "\"";
+            } else {
+                // Dialog Alert jika pengguna klik Cancel
+                alert("Pengiriman pesan dibatalkan.");
+            }
+        }
+
+        function resetPesan() {
+            document.getElementById("hasilPesan").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
